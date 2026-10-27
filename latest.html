@@ -1,0 +1,18 @@
+---
+layout: default
+title: Latest news
+description: The latest cybersecurity news and analysis from SignalSec.
+---
+<header class="page-heading"><p class="eyebrow">ALL COVERAGE</p><h1>Latest news<span class="heading-dot">.</span></h1><p>New reporting and analysis, newest first.</p></header>
+<div class="search-row"><label for="story-search">Search stories</label><input id="story-search" type="search" placeholder="Search headlines and summaries…" autocomplete="off"><span id="search-count" aria-live="polite"></span></div>
+<div class="story-list" id="story-list">
+{% for post in site.posts %}
+<article class="list-story searchable-story" data-search="{{ post.title | downcase | escape }} {{ post.description | default: post.excerpt | strip_html | downcase | escape }} {{ post.categories | join: ' ' | downcase }}">
+  <div class="list-date"><b>{{ post.date | date: "%d" }}</b><span>{{ post.date | date: "%b %Y" }}</span></div>
+  <div class="list-content"><p class="category-label">{{ post.categories | first | default: "Briefing" | replace: "-", " " }}</p><h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2><p>{{ post.description | default: post.excerpt | strip_html | truncate: 180 }}</p><span class="story-meta">{{ post.author | default: "SignalSec Desk" }}</span></div>
+  <a class="list-arrow" href="{{ post.url | relative_url }}" aria-label="Read {{ post.title }}">↗</a>
+</article>
+{% endfor %}
+</div>
+<p class="no-results" id="no-results" hidden>No stories match that search. Try another term.</p>
+{% if site.posts.size == 0 %}<div class="empty-state"><h3>No stories published yet.</h3><p>When you add Markdown posts to <code>_posts/</code>, they will appear here.</p></div>{% endif %}

@@ -1,0 +1,25 @@
+title: "SignalSec"
+description: "Independent cybersecurity news, vulnerability alerts, and threat intelligence."
+url: "https://YOUR-USERNAME.github.io"
+baseurl: "/YOUR-REPOSITORY"
+lang: en
+timezone: Europe/Madrid
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+excerpt_separator: "<!--more-->"
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+header_pages:
+  - latest.html
+  - vulnerabilities.html
+  - breaches.html
+  - threat-intelligence.html
+  - sources.html
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: article
