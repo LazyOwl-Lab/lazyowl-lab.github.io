@@ -33,7 +33,20 @@ description: Independent cybersecurity news, vulnerability alerts and threat int
 {% assign top_stories = site.posts | slice: 0, 3 %}
 
 {% for post in top_stories %}
-<section class="featured-story">
+<article class="featured-story">
+
+  <!-- Show the article's own thumbnail if one is provided -->
+  {% if post.image %}
+  <a class="featured-image-link" href="{{ post.url | relative_url }}">
+    <img
+      class="featured-thumbnail"
+      src="{{ post.image | relative_url }}"
+      alt="{{ post.image_alt | default: post.title | escape }}"
+      loading="lazy"
+    >
+  </a>
+  {% else %}
+  <!-- Use the Hidden Route graphic when no thumbnail is available -->
   <div class="featured-art" aria-hidden="true">
     <div class="art-grid"></div>
     <div class="art-orbit orbit-one"></div>
@@ -41,9 +54,12 @@ description: Independent cybersecurity news, vulnerability alerts and threat int
     <div class="art-core">H<span>·</span>R</div>
     <span class="art-caption">THREAT LANDSCAPE / {{ post.date | date: "%Y" }}</span>
   </div>
+  {% endif %}
 
   <div class="featured-copy">
-    <p class="category-label">{{ post.categories | first | default: "Briefing" | replace: "-", " " | upcase }}</p>
+    <p class="category-label">
+      {{ post.categories | first | default: "Briefing" | replace: "-", " " | upcase }}
+    </p>
 
     <h3>
       <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
@@ -59,7 +75,7 @@ description: Independent cybersecurity news, vulnerability alerts and threat int
 
     <a class="text-link" href="{{ post.url | relative_url }}">Read the briefing <span>→</span></a>
   </div>
-</section>
+</article>
 {% endfor %}
 
 {% if site.posts.size == 0 %}
@@ -71,33 +87,50 @@ description: Independent cybersecurity news, vulnerability alerts and threat int
 </div>
 {% endif %}
 
-<!-- LATEST NEWS -->
+<!-- LATEST NEWS: SKIP THE 3 TOP STORIES -->
 <section class="section-heading latest-heading">
   <div>
     <p class="eyebrow">FRESH INTELLIGENCE</p>
     <h2>Latest news</h2>
   </div>
-  <span class="muted-note">Newest first</span>
+  <span class="muted-note">More recent reporting</span>
 </section>
 
 <div class="story-grid">
-  {% for post in site.posts limit:6 %}
+  {% assign latest_articles = site.posts | slice: 3, 6 %}
+
+  {% for post in latest_articles %}
   <article class="story-card">
-    <div class="card-topline">
-      <span class="category-label">{{ post.categories | first | default: "Briefing" | replace: "-", " " }}</span>
-      <span class="card-date">{{ post.date | date: "%d %b" }}</span>
+
+    {% if post.image %}
+    <a class="card-image-link" href="{{ post.url | relative_url }}">
+      <img
+        class="card-thumbnail"
+        src="{{ post.image | relative_url }}"
+        alt="{{ post.image_alt | default: post.title | escape }}"
+        loading="lazy"
+      >
+    </a>
+    {% endif %}
+
+    <div class="card-content">
+      <div class="card-topline">
+        <span class="category-label">{{ post.categories | first | default: "Briefing" | replace: "-", " " }}</span>
+        <span class="card-date">{{ post.date | date: "%d %b" }}</span>
+      </div>
+
+      <h3>
+        <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+      </h3>
+
+      <p>{{ post.description | default: post.excerpt | strip_html | truncate: 135 }}</p>
+
+      <div class="card-bottom">
+        <span>{{ post.reading_time | default: "Briefing" }}</span>
+        <a aria-label="Read {{ post.title | escape }}" href="{{ post.url | relative_url }}">↗</a>
+      </div>
     </div>
 
-    <h3>
-      <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-    </h3>
-
-    <p>{{ post.description | default: post.excerpt | strip_html | truncate: 135 }}</p>
-
-    <div class="card-bottom">
-      <span>{{ post.reading_time | default: "Briefing" }}</span>
-      <a aria-label="Read {{ post.title | escape }}" href="{{ post.url | relative_url }}">↗</a>
-    </div>
   </article>
   {% endfor %}
 </div>

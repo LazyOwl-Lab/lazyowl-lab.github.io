@@ -185,3 +185,59 @@ h1,h2,h3{font-family:Manrope,'DM Sans',sans-serif;letter-spacing:-.045em}
 @media(max-width:900px){.primary-nav{gap:13px}.primary-nav>a{font-size:11px}.hero{gap:30px}.featured-copy{padding:27px}.story-grid{grid-template-columns:repeat(2,1fr)}.standards-layout{grid-template-columns:minmax(0,1fr) 230px;gap:25px}.article-layout{gap:28px}}
 @media(max-width:700px){.wrap{width:min(100% - 32px,1180px)}.top-strip-inner{font-size:8px;letter-spacing:.5px}.header-inner{min-height:72px}.nav-toggle{display:flex;flex-direction:column;gap:5px;cursor:pointer}.nav-toggle span{width:22px;height:2px;background:var(--ink)}.primary-nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--white);border-bottom:1px solid var(--line);padding:18px 24px;align-items:stretch;flex-direction:column;gap:0;box-shadow:var(--shadow)}.primary-nav.is-open{display:flex}.primary-nav>a{padding:12px 0;border-bottom:1px solid var(--line);font-size:13px}.theme-toggle{margin-top:12px}.hero{grid-template-columns:1fr;padding:46px 0;gap:25px}.hero h1{font-size:clamp(43px,12vw,66px)}.hero-deck{font-size:15px}.hero-aside{min-height:auto}.featured-story{grid-template-columns:1fr}.featured-art{min-height:230px}.featured-copy{padding:25px}.section-heading{margin-top:37px}.section-heading h2,.topic-band h2{font-size:26px}.story-grid{grid-template-columns:1fr}.story-card{min-height:190px}.topic-band{grid-template-columns:1fr;padding:25px;gap:20px;margin-top:48px}.source-note{align-items:flex-start;flex-wrap:wrap;gap:13px}.source-note>div:nth-child(2){flex:1;min-width:200px}.source-note .text-link{margin-left:51px}.page-heading{padding:42px 0 26px}.page-heading h1{font-size:43px}.search-row{flex-wrap:wrap;gap:10px}.search-row label{width:100%}.search-row input{flex-basis:100%}.list-story{grid-template-columns:52px 1fr 28px;gap:12px;padding:22px 0}.list-date b{font-size:25px}.list-content h2{font-size:19px}.list-content>p:not(.category-label){font-size:12px}.article-header{margin-bottom:25px}.article-header h1{font-size:39px}.article-deck{font-size:16px}.article-layout{grid-template-columns:1fr}.article-aside{padding-top:0}.standards-layout{grid-template-columns:1fr}.standards-aside{order:-1}.footer-main{grid-template-columns:1fr 1fr;gap:30px;padding:35px 0}.footer-brand{grid-column:1/-1}.footer-bottom{flex-direction:column;gap:6px}.article-body{font-size:15px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+
+/* =========================================
+   THE HIDDEN ROUTE - ARTICLE THUMBNAILS
+   ========================================= */
+
+/* Top Stories image */
+.featured-image-link {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.featured-thumbnail {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.featured-image-link:hover .featured-thumbnail {
+  transform: scale(1.03);
+}
+
+/* Latest News image */
+.card-image-link {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.card-thumbnail {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card-image-link:hover .card-thumbnail {
+  transform: scale(1.04);
+}
+
+/* Keep card content spacing consistent */
+.card-content {
+  padding: 1rem;
+}
+
+/* Responsive thumbnail sizing */
+@media (max-width: 600px) {
+  .featured-thumbnail {
+    min-height: 200px;
+    max-height: 260px;
+  }
+}
