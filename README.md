@@ -15,10 +15,7 @@ A responsive, editorial-style cybersecurity news website inspired by the structu
 
 ## Before publishing
 
-1. Edit `_config.yml`.
-   - Replace `YOUR-USERNAME` in `url` with your GitHub username.
-   - Replace `/YOUR-REPOSITORY` in `baseurl` with your repository name.
-   - If your repository is `your-username.github.io`, set `baseurl: ""`.
+1. `_config.yml` is already configured for `https://lazyowl-lab.github.io` with `baseurl: ""`, because this repository is published as a user site (`lazyowl-lab.github.io`). If you rename the repository or publish it as a project site, update `url` and `baseurl` accordingly.
 2. Change the publication name, description and any contact/about copy to match your project.
 3. Replace or remove the sample post `_posts/2026-10-27-welcome-to-signalsec.md`. It is clearly marked as a preview, not live reporting.
 4. Review the source links and write your real editorial policy before launch.

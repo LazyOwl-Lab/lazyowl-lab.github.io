@@ -1,7 +1,7 @@
 title: "SignalSec"
 description: "Independent cybersecurity news, vulnerability alerts, and threat intelligence."
-url: "https://YOUR-USERNAME.github.io"
-baseurl: "/YOUR-REPOSITORY"
+url: "https://lazyowl-lab.github.io"
+baseurl: ""
 lang: en
 timezone: Europe/Madrid
 markdown: kramdown
