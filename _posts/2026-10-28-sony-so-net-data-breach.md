@@ -18,7 +18,7 @@ The company said that So-net account passwords were not leaked. However, email a
 
 ## Timeline
 
-<div class="table-wrapper">
+<div class="table-wrapper timeline-table">
 
 <table>
   <thead>
