@@ -1,4 +1,3 @@
-```markdown
 ---
 layout: article
 title: "How to Recognise a Phishing Email"
