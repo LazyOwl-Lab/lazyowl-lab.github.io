@@ -30,8 +30,20 @@
   <footer class="site-footer">
     <div class="wrap footer-main">
       <div class="footer-brand"><a class="brand brand-footer" href="{{ '/' | relative_url }}"><span class="brand-symbol">H<span>·</span>R</span><span class="brand-name">THE HIDDEN<span>ROUTE</span><small>CYBERSECURITY BRIEFING</small></span></a><p>Follow the trail. Understand the threat.<br>Independent cybersecurity news, shared as a personal hobby.</p></div>
-      <div class="footer-links"><b>Explore</b><a href="{{ '/latest.html' | relative_url }}">Latest news</a><a href="{{ '/vulnerabilities.html' | relative_url }}">Vulnerabilities</a><a href="{{ '/breaches.html' | relative_url }}">Data breaches</a><a href="{{ '/threat-intelligence.html' | relative_url }}">Threat intelligence</a></div>
-      <div class="footer-links"><b>About this site</b><a href="{{ '/sources.html' | relative_url }}">Sources & editorial standards</a><a href="{{ '/feed.xml' | relative_url }}">RSS feed</a><a href="https://github.com/" rel="noopener">GitHub</a></div>
+     <div class="footer-links">
+  <b>Explore</b>
+  <a href="{{ '/latest/' | relative_url }}">Latest news</a>
+  <a href="{{ '/vulnerabilities/' | relative_url }}">Vulnerabilities</a>
+  <a href="{{ '/breaches/' | relative_url }}">Data breaches</a>
+  <a href="{{ '/threat-intelligence/' | relative_url }}">Threat intelligence</a>
+</div>
+
+<div class="footer-links">
+  <b>About this site</b>
+  <a href="{{ '/sources/' | relative_url }}">Sources &amp; editorial standards</a>
+  <a href="{{ '/feed.xml' | relative_url }}">RSS feed</a>
+  <a href="https://github.com/" rel="noopener">GitHub</a>
+</div>
     </div>
     <div class="wrap footer-bottom"><span>© {{ 'now' | date: "%Y" }} The Hidden Route. Independent publication.</span><span>Explore. Verify. Understand.</span></div>
   </footer>
