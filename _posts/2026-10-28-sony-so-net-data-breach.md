@@ -1,16 +1,14 @@
 ---
 layout: article
-title: "Sony Network Communications / So-net Data Breach Exposes 2.58 Million Records"
+title: "Sony Network Communications / So-net Data Breach"
 date: 2026-10-28
 categories:
   - cybersecurity
 description: "Sony Network Communications disclosed unauthorised access to its So-net member database, affecting more than 2.58 million member records and exposing email credentials for a smaller group."
 author: UnknownWanderer
 image: /assets/images/sony-so-net-data-breach.jpg
-image_alt: "Cybersecurity illustration representing a data breach affecting Sony Network Communications and So-net customer records"
+image_alt: "Cybersecurity illustration representing the Sony So-net data breach"
 ---
-
-# Sony Network Communications / So-net Data Breach
 
 ## Overview
 
@@ -20,24 +18,81 @@ The company said that So-net account passwords were not leaked. However, email a
 
 ## Timeline
 
-| Date | Event |
-|---|---|
-| 19 October 2026 | An external party gained unauthorised access to the So-net member database. |
-| 23 October 2026 | Sony Network Communications detected the intrusion, stopped the affected server, and blocked communications from the attack source. |
-| 24 October 2026 | The investigation confirmed personal-data leakage and identified the affected data categories and record counts. |
-| 27 October 2026 | Sony publicly announced the incident, reset affected email-service passwords, and reported the matter to Japan’s Personal Information Protection Commission. |
+<div class="table-wrapper">
+
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Event</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>19 October 2026</td>
+      <td>An external party gained unauthorised access to the So-net member database.</td>
+    </tr>
+    <tr>
+      <td>23 October 2026</td>
+      <td>Sony Network Communications detected the intrusion, stopped the affected server, and blocked communications from the attack source.</td>
+    </tr>
+    <tr>
+      <td>24 October 2026</td>
+      <td>The investigation confirmed personal-data leakage and identified the affected data categories and record counts.</td>
+    </tr>
+    <tr>
+      <td>27 October 2026</td>
+      <td>Sony publicly announced the incident, reset affected email-service passwords, and reported the matter to Japan’s Personal Information Protection Commission.</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
 
 ## What Was Exposed?
 
 The incident affected two main customer groups: **So-net members** and **plala (S Course) members**.
 
-| Data category | Records affected | Details |
-|---|---:|---|
-| So-net member records | 2,141,986 | Includes 1,869,771 current members and 272,215 former members who left after March 2026. |
-| plala (S Course) member records | 443,495 | Includes 422,365 current members and 21,130 former members who left after March 2026. |
-| Email addresses and email passwords | 54,401 | Across Mail Service (G), A-Box, So-net VAIO Mail, and PostPet Mail. |
-| Bank-account information | 16 | Included bank name, bank and branch codes, account type, account number, and account-holder name. Bank PINs were not held. |
-| Password-reset notification data | 7 | Sony reset the relevant passwords and contacted affected users individually. |
+<div class="table-wrapper">
+
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Data category</th>
+      <th scope="col">Records affected</th>
+      <th scope="col">Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>So-net member records</td>
+      <td>2,141,986</td>
+      <td>Includes 1,869,771 current members and 272,215 former members who left after March 2026.</td>
+    </tr>
+    <tr>
+      <td>plala (S Course) member records</td>
+      <td>443,495</td>
+      <td>Includes 422,365 current members and 21,130 former members who left after March 2026.</td>
+    </tr>
+    <tr>
+      <td>Email addresses and email passwords</td>
+      <td>54,401</td>
+      <td>Across Mail Service (G), A-Box, So-net VAIO Mail, and PostPet Mail.</td>
+    </tr>
+    <tr>
+      <td>Bank-account information</td>
+      <td>16</td>
+      <td>Included bank name, bank and branch codes, account type, account number, and account-holder name. Bank PINs were not held.</td>
+    </tr>
+    <tr>
+      <td>Password-reset notification data</td>
+      <td>7</td>
+      <td>Sony reset the relevant passwords and contacted affected users individually.</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
 
 For the main So-net and plala member records, exposed personal information included **names, telephone numbers, email addresses, user IDs, dates of birth, sex, and internet-connection IDs**.
 
