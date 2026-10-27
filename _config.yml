@@ -3,7 +3,7 @@ description: "Independent cybersecurity news, vulnerability alerts, and threat i
 url: "https://lazyowl-lab.github.io"
 baseurl: ""
 lang: en
-timezone: Europe/Madrid
+timezone: Asia/Singapore
 markdown: kramdown
 permalink: /:year/:month/:day/:title/
 excerpt_separator: "<!--more-->"
