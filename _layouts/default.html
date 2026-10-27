@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101c2c">
+  {% seo %}
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title }} Feed" href="{{ '/feed.xml' | relative_url }}">
+  <script defer src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="top-strip"><div class="wrap top-strip-inner"><span>INDEPENDENT CYBERSECURITY COVERAGE</span><span class="top-date" data-current-date></span></div></div>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home"><span class="brand-symbol">H<span>·</span>R</span><span class="brand-name">THE HIDDEN<span>ROUTE</span><small>CYBERSECURITY BRIEFING</small></span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span><b class="sr-only">Toggle navigation</b></button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
+        <a href="{{ '/latest.html' | relative_url }}">Latest</a>
+        <a href="{{ '/vulnerabilities.html' | relative_url }}">Vulnerabilities</a>
+        <a href="{{ '/breaches.html' | relative_url }}">Data breaches</a>
+        <a href="{{ '/threat-intelligence.html' | relative_url }}">Threat intel</a>
+        <a href="{{ '/sources.html' | relative_url }}">Sources</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">◐</button>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="wrap main-content">{{ content }}</main>
+  <footer class="site-footer">
+    <div class="wrap footer-main">
+      <div class="footer-brand"><a class="brand brand-footer" href="{{ '/' | relative_url }}"><span class="brand-symbol">H<span>·</span>R</span><span class="brand-name">THE HIDDEN<span>ROUTE</span><small>CYBERSECURITY BRIEFING</small></span></a><p>Follow the trail. Understand the threat.<br>Independent cybersecurity news, shared as a personal hobby.</p></div>
+      <div class="footer-links"><b>Explore</b><a href="{{ '/latest.html' | relative_url }}">Latest news</a><a href="{{ '/vulnerabilities.html' | relative_url }}">Vulnerabilities</a><a href="{{ '/breaches.html' | relative_url }}">Data breaches</a><a href="{{ '/threat-intelligence.html' | relative_url }}">Threat intelligence</a></div>
+      <div class="footer-links"><b>About this site</b><a href="{{ '/sources.html' | relative_url }}">Sources & editorial standards</a><a href="{{ '/feed.xml' | relative_url }}">RSS feed</a><a href="https://github.com/" rel="noopener">GitHub</a></div>
+    </div>
+    <div class="wrap footer-bottom"><span>© {{ 'now' | date: "%Y" }} The Hidden Route. Independent publication.</span><span>Explore. Verify. Understand.</span></div>
+  </footer>
+</body>
+</html>
