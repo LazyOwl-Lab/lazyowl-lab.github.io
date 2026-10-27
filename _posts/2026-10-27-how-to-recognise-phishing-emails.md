@@ -185,4 +185,3 @@ A few seconds of caution can help prevent a compromised account, financial loss,
 **THE HIDDEN ROUTE | CYBERSECURITY BRIEFING**
 
 *Independent cybersecurity reporting, practical security guidance, and threat awareness.*
-```
