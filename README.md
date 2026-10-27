@@ -1,15 +1,14 @@
-```markdown
 # The Hidden Route
 
 ### Security news. Without the noise.
 
-**The Hidden Route** is an independent cybersecurity publication dedicated to making the digital threat landscape easier to understand.
+The Hidden Route is an independent cybersecurity publication dedicated to making the digital threat landscape easier to understand.
 
 From newly discovered software vulnerabilities and data breaches to phishing campaigns, malware, and emerging cyber threats, we explore the stories that matter in today's connected world.
 
 Our goal is simple: deliver clear, informative cybersecurity coverage that helps readers understand what is happening, why it matters, and what they can do to stay safer online.
 
-🌐 **Website:** https://lazyowl-lab.github.io/
+🌐 Website: [lazyowl-lab.github.io](https://lazyowl-lab.github.io/)
 
 ---
 
@@ -35,15 +34,15 @@ Cybersecurity isn't just for specialists. Our educational guides help readers re
 
 ## Our Editorial Principles
 
-**Evidence before urgency.**
+*Evidence before urgency.*
 
 Cybersecurity news can be complicated, and misleading headlines can create unnecessary fear. We aim to provide useful context rather than sensationalism.
 
-- **Accuracy:** Prioritise verifiable information and distinguish confirmed facts from unverified claims.
-- **Trusted sources:** Refer to original advisories, official disclosures, and credible reporting wherever possible.
-- **Clarity:** Explain technical concepts in straightforward language without losing important details.
-- **Practical value:** Highlight relevant security implications and actionable defensive guidance.
-- **Transparency:** Recognise uncertainty and update coverage when significant new information becomes available.
+* **Accuracy:** Prioritise verifiable information and distinguish confirmed facts from unverified claims.
+* **Trusted sources:** Refer to original advisories, official disclosures, and credible reporting wherever possible.
+* **Clarity:** Explain technical concepts in straightforward language without losing important details.
+* **Practical value:** Highlight relevant security implications and actionable defensive guidance.
+* **Transparency:** Recognise uncertainty and update coverage when significant new information becomes available.
 
 ---
 
@@ -61,5 +60,4 @@ The digital world is constantly changing. Understanding its risks is an importan
 
 **The Hidden Route** — independent cybersecurity coverage, practical security knowledge, and a clearer view of the threats behind the headlines.
 
-*Context over panic. Evidence over speculation.*
-```
+> *Context over panic. Evidence over speculation.*

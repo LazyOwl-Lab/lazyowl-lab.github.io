@@ -10,7 +10,7 @@ image: /assets/images/phishing-email.jpg
 image_alt: "A suspicious email highlighted in a futuristic cybersecurity interface"
 ---
 
-**THE HIDDEN ROUTE | CYBERSECURITY BRIEFING**
+## THE HIDDEN ROUTE | CYBERSECURITY BRIEFING
 
 Phishing emails are one of the most common methods cybercriminals use to steal personal information, compromise accounts, and spread malware. These messages are designed to look legitimate, often pretending to come from trusted companies, banks, delivery services, or colleagues.
 
@@ -176,12 +176,12 @@ Good security habits make phishing attacks easier to avoid.
 
 Phishing attacks continue to evolve, and not every malicious email contains obvious warning signs. The safest approach is to question unexpected requests, verify important information independently, and avoid sharing sensitive details through untrusted links or messages.
 
-**Pause. Verify. Protect.**
+### Pause. Verify. Protect.
 
 A few seconds of caution can help prevent a compromised account, financial loss, or a much larger security incident.
 
-**THE HIDDEN ROUTE | CYBERSECURITY BRIEFING**
+---
+
+### THE HIDDEN ROUTE | CYBERSECURITY BRIEFING
 
 *Independent cybersecurity reporting, practical security guidance, and threat awareness.*
-
----
