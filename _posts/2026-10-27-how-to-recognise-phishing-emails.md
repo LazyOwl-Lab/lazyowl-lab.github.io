@@ -180,8 +180,8 @@ Phishing attacks continue to evolve, and not every malicious email contains obvi
 
 A few seconds of caution can help prevent a compromised account, financial loss, or a much larger security incident.
 
----
-
 **THE HIDDEN ROUTE | CYBERSECURITY BRIEFING**
 
 *Independent cybersecurity reporting, practical security guidance, and threat awareness.*
+
+---
