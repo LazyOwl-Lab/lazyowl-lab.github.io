@@ -3,6 +3,7 @@ layout: default
 title: Home
 description: Independent cybersecurity news, vulnerability alerts and threat intelligence.
 ---
+
 <section class="hero">
   <div class="hero-copy">
     <p class="eyebrow"><span class="pulse"></span> CYBERSECURITY BRIEFING</p>
@@ -10,6 +11,7 @@ description: Independent cybersecurity news, vulnerability alerts and threat int
     <p class="hero-deck">Clear reporting on vulnerabilities, data breaches, and the people and technology shaping the security landscape.</p>
     <a class="button button-dark" href="{{ '/latest.html' | relative_url }}">Explore latest news <span aria-hidden="true">→</span></a>
   </div>
+
   <div class="hero-aside">
     <div class="signal-mark" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
     <p class="aside-label">THE ROUTE</p>
@@ -19,56 +21,121 @@ description: Independent cybersecurity news, vulnerability alerts and threat int
   </div>
 </section>
 
+<!-- TOP STORIES -->
 <section class="section-heading">
-  <div><p class="eyebrow">THE FRONT PAGE</p><h2>Top stories</h2></div>
+  <div>
+    <p class="eyebrow">THE FRONT PAGE</p>
+    <h2>Top stories</h2>
+  </div>
   <a class="text-link" href="{{ '/latest.html' | relative_url }}">All stories <span>→</span></a>
 </section>
 
-{% assign featured = site.posts | where_exp: "post", "post.featured == true" | first %}
-{% if featured %}
+{% assign top_stories = site.posts | slice: 0, 3 %}
+
+{% for post in top_stories %}
 <section class="featured-story">
-  <div class="featured-art" aria-hidden="true"><div class="art-grid"></div><div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div><div class="art-core">H<span>·</span>R</div><span class="art-caption">THREAT LANDSCAPE / {{ featured.date | date: "%Y" }}</span></div>
+  <div class="featured-art" aria-hidden="true">
+    <div class="art-grid"></div>
+    <div class="art-orbit orbit-one"></div>
+    <div class="art-orbit orbit-two"></div>
+    <div class="art-core">H<span>·</span>R</div>
+    <span class="art-caption">THREAT LANDSCAPE / {{ post.date | date: "%Y" }}</span>
+  </div>
+
   <div class="featured-copy">
-    <p class="category-label">{{ featured.categories | first | replace: "-", " " | upcase }}</p>
-    <h3><a href="{{ featured.url | relative_url }}">{{ featured.title }}</a></h3>
-    <p>{{ featured.description | default: featured.excerpt | strip_html | truncate: 210 }}</p>
-    <div class="story-meta"><span>{{ featured.date | date: "%d %b %Y" }}</span><span>·</span><span>{{ featured.author | default: site.author | default: "The Hidden Route Desk" }}</span></div>
-    <a class="text-link" href="{{ featured.url | relative_url }}">Read the briefing <span>→</span></a>
+    <p class="category-label">{{ post.categories | first | default: "Briefing" | replace: "-", " " | upcase }}</p>
+
+    <h3>
+      <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+    </h3>
+
+    <p>{{ post.description | default: post.excerpt | strip_html | truncate: 210 }}</p>
+
+    <div class="story-meta">
+      <span>{{ post.date | date: "%d %b %Y" }}</span>
+      <span>·</span>
+      <span>{{ post.author | default: site.author | default: "The Hidden Route Desk" }}</span>
+    </div>
+
+    <a class="text-link" href="{{ post.url | relative_url }}">Read the briefing <span>→</span></a>
   </div>
 </section>
+{% endfor %}
+
+{% if site.posts.size == 0 %}
+<div class="empty-state">
+  <span class="empty-icon">+</span>
+  <h3>Your first story starts here.</h3>
+  <p>Add a Markdown article to <code>_posts/</code> and it will appear here automatically.</p>
+  <a class="text-link" href="{{ '/sources.html' | relative_url }}">Browse trusted sources <span>→</span></a>
+</div>
 {% endif %}
 
+<!-- LATEST NEWS -->
 <section class="section-heading latest-heading">
-  <div><p class="eyebrow">FRESH INTELLIGENCE</p><h2>Latest news</h2></div>
+  <div>
+    <p class="eyebrow">FRESH INTELLIGENCE</p>
+    <h2>Latest news</h2>
+  </div>
   <span class="muted-note">Newest first</span>
 </section>
+
 <div class="story-grid">
   {% for post in site.posts limit:6 %}
-  {% unless post.featured == true %}
   <article class="story-card">
-    <div class="card-topline"><span class="category-label">{{ post.categories | first | default: "Briefing" | replace: "-", " " }}</span><span class="card-date">{{ post.date | date: "%d %b" }}</span></div>
-    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+    <div class="card-topline">
+      <span class="category-label">{{ post.categories | first | default: "Briefing" | replace: "-", " " }}</span>
+      <span class="card-date">{{ post.date | date: "%d %b" }}</span>
+    </div>
+
+    <h3>
+      <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+    </h3>
+
     <p>{{ post.description | default: post.excerpt | strip_html | truncate: 135 }}</p>
-    <div class="card-bottom"><span>{{ post.reading_time | default: "Briefing" }}</span><a aria-label="Read {{ post.title }}" href="{{ post.url | relative_url }}">↗</a></div>
+
+    <div class="card-bottom">
+      <span>{{ post.reading_time | default: "Briefing" }}</span>
+      <a aria-label="Read {{ post.title | escape }}" href="{{ post.url | relative_url }}">↗</a>
+    </div>
   </article>
-  {% endunless %}
   {% endfor %}
 </div>
-{% if site.posts.size == 0 %}
-<div class="empty-state"><span class="empty-icon">+</span><h3>Your first story starts here.</h3><p>Add a Markdown article to <code>_posts/</code> and it will appear here automatically.</p><a class="text-link" href="{{ '/sources.html' | relative_url }}">Browse trusted sources <span>→</span></a></div>
-{% endif %}
 
+<!-- EXPLORE BY TOPIC -->
 <section class="topic-band">
-  <div><p class="eyebrow">EXPLORE BY TOPIC</p><h2>Follow what matters.</h2></div>
+  <div>
+    <p class="eyebrow">EXPLORE BY TOPIC</p>
+    <h2>Follow what matters.</h2>
+  </div>
+
   <div class="topic-links">
-    <a href="{{ '/vulnerabilities.html' | relative_url }}"><span class="topic-icon">01</span><span><b>Vulnerabilities</b><small>CVEs, patches & advisories</small></span><span class="topic-arrow">↗</span></a>
-    <a href="{{ '/breaches.html' | relative_url }}"><span class="topic-icon">02</span><span><b>Data breaches</b><small>Incidents & investigations</small></span><span class="topic-arrow">↗</span></a>
-    <a href="{{ '/threat-intelligence.html' | relative_url }}"><span class="topic-icon">03</span><span><b>Threat intelligence</b><small>Malware, actors & campaigns</small></span><span class="topic-arrow">↗</span></a>
+    <a href="{{ '/vulnerabilities.html' | relative_url }}">
+      <span class="topic-icon">01</span>
+      <span><b>Vulnerabilities</b><small>CVEs, patches & advisories</small></span>
+      <span class="topic-arrow">↗</span>
+    </a>
+
+    <a href="{{ '/breaches.html' | relative_url }}">
+      <span class="topic-icon">02</span>
+      <span><b>Data breaches</b><small>Incidents & investigations</small></span>
+      <span class="topic-arrow">↗</span>
+    </a>
+
+    <a href="{{ '/threat-intelligence.html' | relative_url }}">
+      <span class="topic-icon">03</span>
+      <span><b>Threat intelligence</b><small>Malware, actors & campaigns</small></span>
+      <span class="topic-arrow">↗</span>
+    </a>
   </div>
 </section>
 
+<!-- SOURCE NOTE -->
 <section class="source-note">
   <div class="source-note-icon">✓</div>
-  <div><h3>Evidence before urgency.</h3><p>We aim to link to primary advisories and original reporting, distinguish confirmed facts from allegations, and update stories when the evidence changes.</p></div>
+  <div>
+    <h3>Evidence before urgency.</h3>
+    <p>We aim to link to primary advisories and original reporting, distinguish confirmed facts from allegations, and update stories when the evidence changes.</p>
+  </div>
   <a class="text-link" href="{{ '/sources.html' | relative_url }}">Our source guide <span>→</span></a>
 </section>
