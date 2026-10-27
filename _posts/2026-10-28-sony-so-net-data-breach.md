@@ -19,34 +19,36 @@ The company said that So-net account passwords were not leaked. However, email a
 ## Timeline
 
 <div class="table-wrapper timeline-table">
-
-<table>
-  <thead>
-    <tr>
-      <th scope="col">Date</th>
-      <th scope="col">Event</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>19 October 2026</td>
-      <td>An external party gained unauthorised access to the So-net member database.</td>
-    </tr>
-    <tr>
-      <td>23 October 2026</td>
-      <td>Sony Network Communications detected the intrusion, stopped the affected server, and blocked communications from the attack source.</td>
-    </tr>
-    <tr>
-      <td>24 October 2026</td>
-      <td>The investigation confirmed personal-data leakage and identified the affected data categories and record counts.</td>
-    </tr>
-    <tr>
-      <td>27 October 2026</td>
-      <td>Sony publicly announced the incident, reset affected email-service passwords, and reported the matter to Japan’s Personal Information Protection Commission.</td>
-    </tr>
-  </tbody>
-</table>
-
+  <table>
+    <colgroup>
+      <col style="width: 145px;">
+      <col>
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Event</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>19 October 2026</td>
+        <td>An external party gained unauthorised access to the So-net member database.</td>
+      </tr>
+      <tr>
+        <td>23 October 2026</td>
+        <td>Sony Network Communications detected the intrusion, stopped the affected server, and blocked communications from the attack source.</td>
+      </tr>
+      <tr>
+        <td>24 October 2026</td>
+        <td>The investigation confirmed personal-data leakage and identified the affected data categories and record counts.</td>
+      </tr>
+      <tr>
+        <td>27 October 2026</td>
+        <td>Sony publicly announced the incident, reset affected email-service passwords, and reported the matter to Japan’s Personal Information Protection Commission.</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 ## What Was Exposed?

@@ -241,33 +241,43 @@ h1,h2,h3{font-family:Manrope,'DM Sans',sans-serif;letter-spacing:-.045em}
     max-height: 260px;
   }
 }
-/* Fix Timeline table layout */
-.timeline-table {
+/* Timeline table layout fix */
+.table-wrapper.timeline-table {
+  display: block;
+  width: 100%;
+  max-width: 100%;
   overflow-x: auto;
-  width: 100%;
 }
 
-.timeline-table table {
+.table-wrapper.timeline-table table {
+  display: table;
   width: 100%;
-  min-width: 0;
+  min-width: 0 !important;
   table-layout: fixed;
+  border-collapse: collapse;
 }
 
-.timeline-table th:first-child,
-.timeline-table td:first-child {
-  width: 150px;
-  min-width: 150px;
-  white-space: nowrap;
+.table-wrapper.timeline-table th:first-child,
+.table-wrapper.timeline-table td:first-child {
+  width: 145px !important;
+  min-width: 145px !important;
+  white-space: nowrap !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
 }
 
-.timeline-table th:nth-child(2),
-.timeline-table td:nth-child(2) {
+.table-wrapper.timeline-table th:last-child,
+.table-wrapper.timeline-table td:last-child {
   width: auto;
-  white-space: normal;
+  white-space: normal !important;
   overflow-wrap: break-word;
+  word-break: normal;
 }
 
-.timeline-table td {
+.table-wrapper.timeline-table th,
+.table-wrapper.timeline-table td {
+  box-sizing: border-box;
+  padding: 12px 16px;
   vertical-align: top;
   line-height: 1.6;
 }
