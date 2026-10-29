@@ -314,3 +314,27 @@ h1,h2,h3{font-family:Manrope,'DM Sans',sans-serif;letter-spacing:-.045em}
 .table-wrapper.timeline-table tbody tr:hover td {
   background-color: rgba(128, 128, 128, 0.06);
 }
+/* Visitor counter badge */
+.visitor-counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 22px auto 12px;
+  padding: 10px 16px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+}
+
+.visitor-counter-label {
+  font-weight: 700;
+}
+
+.visitor-counter img {
+  display: block;
+  width: auto;
+  height: 20px;
+  border: 0;
+}
